@@ -16,7 +16,7 @@ class hccrepo (
         yumrepo { 'hcc':
             baseurl     => $hccrepo_baseurl,
             enabled     => $hccrepo_enabled,
-            descr       => "HCC Packages for Enterprise Linux ${::lsbmajdistrelease - \$basearch",
+            descr       => "HCC Packages for Enterprise Linux ${::lsbmajdistrelease} - \$basearch",
         }
 
         yumrepo { 'hcc-testing':
