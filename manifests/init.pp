@@ -21,7 +21,7 @@ class hccrepo (
 
         yumrepo { 'hcc-testing':
             baseurl     => $hccrepo_testing_baseurl,
-            enabled     => $hccrepo_enabled,
+            enabled     => $hccrepo_testing_enabled,
             descr       => "HCC Packages for Enterprise Linux ${::lsbmajdistrelease} - Testing - \$basearch",
         }
 
