@@ -20,21 +20,21 @@ class hccrepo (
     if $::osfamily == 'RedHat' and $::operatingsystem !~ /Fedora|Amazon/ {
 
         yumrepo { 'hcc':
-            baseurl     => $hccrepo_baseurl,
-            enabled     => $hccrepo_enabled,
-            descr       => "HCC Packages for Enterprise Linux ${::lsbmajdistrelease} - \$basearch",
-            gpgcheck    => $hccrepo_gpgcheck,
-            gpgkey      => $hccrepo_gpgkey,
-            priority    => $hccrepo_priority,
+            baseurl  => $hccrepo_baseurl,
+            enabled  => $hccrepo_enabled,
+            descr    => "HCC Packages for Enterprise Linux ${::operatingsystemmajrelease} - \$basearch",
+            gpgcheck => $hccrepo_gpgcheck,
+            gpgkey   => $hccrepo_gpgkey,
+            priority => $hccrepo_priority,
         }
 
         yumrepo { 'hcc-testing':
-            baseurl     => $hccrepo_testing_baseurl,
-            enabled     => $hccrepo_testing_enabled,
-            descr       => "HCC Packages for Enterprise Linux ${::lsbmajdistrelease} - Testing - \$basearch",
-            gpgcheck    => $hccrepo_testing_gpgcheck,
-            gpgkey      => $hccrepo_testing_gpgkey,
-            priority    => $hccrepo_testing_priority,
+            baseurl  => $hccrepo_testing_baseurl,
+            enabled  => $hccrepo_testing_enabled,
+            descr    => "HCC Packages for Enterprise Linux ${::operatingsystemmajrelease} - Testing - \$basearch",
+            gpgcheck => $hccrepo_testing_gpgcheck,
+            gpgkey   => $hccrepo_testing_gpgkey,
+            priority => $hccrepo_testing_priority,
         }
 
     } else {
